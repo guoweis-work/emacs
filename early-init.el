@@ -33,7 +33,7 @@
 (push '(ns-use-native-fullscreen . t) default-frame-alist)
 (push '(ns-transparent-titlebar . t) default-frame-alist)
 (push '(vertical-scroll-bars . nil) default-frame-alist)
-(push '(background-color . "#1e1e2e") default-frame-alist)
+;; (push '(background-color . "#1e1e2e") default-frame-alist)
 
  (setq frame-inhibit-implied-resize t
       frame-resize-pixelwise t

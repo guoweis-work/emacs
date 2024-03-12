@@ -85,7 +85,7 @@
   (setq mac-option-key-is-meta nil
         mac-command-key-is-meta t
         mac-command-modifier 'meta
-        mac-option-modifier 'none
+        mac-option-modifier 'meta
         dired-use-ls-dired nil
         browse-url-browser-function #'mk/browser-split-window))
 (put 'narrow-to-page 'disabled nil)
@@ -177,6 +177,7 @@
 
 (use-package welcome-dashboard
   :ensure nil
+  :load-path "/Users/guoweis/git/konrad1977_welcome-dashboard"
   :custom-face
   (welcome-dashboard-path-face ((t (:height 0.8))))
   :config
@@ -520,6 +521,7 @@
 
 (use-package window-stool
   :ensure nil
+  :load-path "/Users/guoweis/git/JasZhe_window-stool"
   :config
   (setq window-stool-n-from-top 2
         window-stool-n-from-bottom 0)
@@ -723,6 +725,7 @@
 
 (use-package eglot-booster
   :ensure nil
+  :load-path "/Users/guoweis/git/jdtsmith_eglot-booster"
   :after eglot
   :config (eglot-booster-mode)
     ;; (package-vc-install "https://github.com/jdtsmith/eglot-booster")
