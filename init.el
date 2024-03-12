@@ -1424,6 +1424,9 @@
   :config
   (setq electric-pair-preserve-balance t))
 
+(use-package command-log-mode
+  :ensure nil)
+
 ;; Setup Functions
 (defun mk/setupProgrammingSettings ()
   "Programming mode."
