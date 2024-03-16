@@ -9,4 +9,6 @@ git clone https://github.com/jdtsmith/eglot-booster ~/git/jdtsmith_eglot-booster
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 git clone https://github.com/blahgeek/emacs-lsp-booster ~/git/blahgeek_emacs-lsp-booster
 cd ~/git/blahgeek_emacs-lsp-booster/
+. "$HOME/.cargo/env"
 cargo build --release
+sudo cp target/release/emacs-lsp-booster /usr/local/bin
