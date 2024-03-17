@@ -12,3 +12,5 @@ cd ~/git/blahgeek_emacs-lsp-booster/
 . "$HOME/.cargo/env"
 cargo build --release
 sudo cp target/release/emacs-lsp-booster /usr/local/bin
+
+git clone https://github.com/karthink/project-x ~/git/karthink_project-x

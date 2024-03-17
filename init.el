@@ -208,8 +208,8 @@
    ;; (load-theme 'kman t)
 
   ;; (load-theme 'kalmar-night t)
-  (load-theme 'kanagawa t)
-
+  ;; (load-theme 'kanagawa t)
+  (load-theme 'tsdh-dark)
   ;; (load-theme 'doom-tokyo-night)
   )
 
@@ -385,7 +385,7 @@
                 evil-shift-width 2)
   (setq evil-want-integration t
         evil-want-keybinding nil
-        evil-want-minibuffer t
+        evil-want-minibuffer nil
         evil-want-fine-undo t
         evil-want-C-u-scroll t
         evil-undo-system 'undo-fu
@@ -423,7 +423,7 @@
   (define-key evil-motion-state-map (kbd "M-0") #'treemacs)
   (define-key evil-normal-state-map (kbd "C-l") #'evil-ex-nohighlight)
   (define-key evil-normal-state-map (kbd "<escape>") #'evil-ex-nohighlight)
-  
+
   (define-key evil-motion-state-map (kbd "q") #'exit-minibuffer)
   (define-key evil-insert-state-map (kbd "TAB") #'tab-to-tab-stop)
 
@@ -589,7 +589,8 @@
   :bind ("C-x C-g" . google-this))
 
 (use-package eglot
-  :hook ((swift-mode . eglot-ensure))
+  ;; performance is too bad
+  ;; :hook ((swift-mode . eglot-ensure))
   :commands (eglot eglot-ensure)
   :ensure nil
   :config
@@ -1403,6 +1404,13 @@
   :bind
   ("C-c C-l" . #'periphery-run-swiftlint))
 
+(use-package project-x
+  :load-path "/Users/guoweis/git/karthink_project-x/"
+  :after project
+  :config
+  (setq project-x-save-interval 600)    ;Save project state every 10 min
+  (project-x-mode 1))
+
 (defun setup-swift-programming ()
   "Custom setting for swift programming."
   ;; (flymake-mode nil)
@@ -1509,6 +1517,9 @@
   (xref-backend-apropos 'eglot pattern))
 ;;
 ;;
+
+;; (load-theme 'tsdh-dark)
+
 (provide 'init)
 
 ; init.el ends here
